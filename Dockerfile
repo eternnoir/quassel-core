@@ -7,4 +7,6 @@ MAINTAINER Frank Wang "eternnoir@gmail.com"
 
 #Update
 RUN apt-get update && apt-get install -y quassel-core
+VOLUME ["/var/lib/quassel"]
 EXPOSE 4242
+CMD ["quasselcore", "--configdir=/var/lib/quassel/"]
